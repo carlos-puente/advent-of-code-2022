@@ -21,6 +21,20 @@ public class DataInput {
 		}
 	}
 
+	static String readFile(String path) {
+		byte[] encoded = new byte[0];
+		try {
+			encoded = Files.readAllBytes(Paths.get(path));
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		return new String(encoded, Charset.defaultCharset());
+	}
+
+	public static String getDataStreamBuffer() {
+		return readFile("src/main/resources/inputDay6.txt");
+	}
+
 	public static List<String> getCalories() {
 		return getListByPath("src/main/resources/inputDay1.txt");
 	}
@@ -122,4 +136,3 @@ public class DataInput {
 	}
 
 }
-
