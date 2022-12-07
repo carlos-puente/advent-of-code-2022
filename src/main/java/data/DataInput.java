@@ -39,6 +39,10 @@ public class DataInput {
 		return getListByPath("src/main/resources/inputDay1.txt");
 	}
 
+	public static List<String> getFileSystem() {
+		return getListByPath("src/main/resources/inputDay7.txt");
+	}
+
 	public static List<String> getTheirMovements() {
 		return getListByPath("src/main/resources/inputDay2Their.txt");
 	}
@@ -136,3 +140,4 @@ public class DataInput {
 	}
 
 }
+
